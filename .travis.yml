@@ -6,7 +6,7 @@ services:
   - docker # get a copy of docker cli
 
 before_install:
-  - docker build -t johnayinde/docker-react -f Dockerfile.dev
+  - docker build -t johnayinde/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true my-react-app npm run test
