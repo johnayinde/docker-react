@@ -1,0 +1,12 @@
+language: generic
+
+sudo: required #for super user permission
+
+services:
+  - docker # get a copy of docker cli
+
+before_install:
+  - docker build -f Dockerfile.dev -t johnayinde/docker-react
+
+script:
+  - docker run -e CI=true my-react-app npm run test
