@@ -1,6 +1,5 @@
-language: generic
-
 sudo: required #for super user permission
+language: generic
 
 services:
   - docker # get a copy of docker cli
@@ -15,7 +14,7 @@ deploy:
   provider: elasticbeanstalk
   region: 'eu-west-1'
   app: 'docker-react'
-  env: 'Docker-react-env'
+  env: 'Docker-react-env-1'
   bucket_name: 'elasticbeanstalk-eu-west-1-144552851719'
   bucket_path: 'docker-react'
 
